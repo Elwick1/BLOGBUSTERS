@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BLOGBUSTERS</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+<h3><%= flash[:notice] %></h3>
+    <% if current_user %>
+      <h3>You are logged in as: <%= current_user.username %></h3>
+      <%= link_to "Log Out Of BLOGBUSTERS", sessions_path, method: :delete %>
+    <% end %>
+    <%= yield %>
+ 
+     
+  </body>
+</html>

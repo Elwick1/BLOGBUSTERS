@@ -1,0 +1,8 @@
+<h1>YOUR FELLOW BLOGBUSTERS (A List Of Really Cool People!)</h1>
+<% @users.each do |user| %>
+<h2><%= link_to user.username, user_path(user) %></h2>
+<% end %>
+<br>
+<h3> <%= link_to  "I WANT TO SEE MORE ARTICLES!", articles_path %></h3>
+
+<p> <%= link_to "TAKE ME BACK TO THE HOME PAGE!", welcome_path %></p>

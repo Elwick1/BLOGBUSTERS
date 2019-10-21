@@ -1,0 +1,12 @@
+<h2>LOG IN</h2>
+
+<%= form_tag sessions_path do %>
+    <%= label :user, :username %>
+    <%= text_field :user, :username %>
+
+    <%= label :user, :password %>
+    <%= password_field :user, :password %>
+
+    <%= submit_tag "LOG IN" %>
+<h2><%= link_to "Back To BLOGBUSTERS Homepage", welcome_path %></h2> 
+<% end %>

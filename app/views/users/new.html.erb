@@ -1,0 +1,24 @@
+<h1> !!!SIGN UP!!! </h1>
+<% if @user.errors %>
+    <ul>
+<% @user.errors.full_messages.each do |msg| %>
+    <li> <%= msg %> </li>
+        <% end %>
+        </ul>
+        <% end %>
+<%= form_for @user do |f| %>
+<%= f.label :username %>
+<%= f.text_field :username %>
+<br><br>
+<%= f.label :password %>
+<%= f.password_field :password %>
+<br><br>
+<%= f.label :age %>
+<%= f.number_field :age %>
+<br><br>
+<%= f.label :bio %>
+<%= f.text_area :bio %>
+<br><br>
+<h2><%= link_to "Actually, I Changed My Mind, I Don't Want To Join This Exclusive Club...", welcome_path %></h2>
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,14 @@
+<h1> HERE'S <%= @article.user.username %>'s ARTICLE! </h1>
+<br><br>
+<h2><%= @article.title %></h2>
+<br><br>
+<h3><%= @article.content %></h3>
+<br><br>
+
+
+<%= link_to "EDIT MY ARTICLE", edit_article_path %>
+<br><br>
+<%= link_to "DELETE MY ARTICLE", article_path(@article), method: :delete %> 
+<br><br>
+<%= link_to "BROWSE OTHER ARTICLES", articles_path %>
+<br><br>
