@@ -6,9 +6,9 @@
 <br><br>
 
 
-<%= link_to "EDIT MY ARTICLE", edit_article_path %>
-<br><br>
-<%= link_to "DELETE MY ARTICLE", article_path(@article), method: :delete %> 
-<br><br>
-<%= link_to "BROWSE OTHER ARTICLES", articles_path %>
-<br><br>
+<%= button_to "EDIT MY ARTICLE", edit_article_path, method: :get %>
+<br>
+<%= button_to "DELETE MY ARTICLE", article_path(@article), method: :delete %> 
+<br>
+<%= button_to "BROWSE OTHER ARTICLES", articles_path, method: :get %>
+<br>

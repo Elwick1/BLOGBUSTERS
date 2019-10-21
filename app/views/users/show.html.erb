@@ -7,8 +7,7 @@
 <h2><%= @user.bio %></h2>
 <br><br>
 
-<h2> <%= link_to  "NOW THAT YOU'RE IN, GET WRITING!!!", new_article_path %></h2>
-<br>
-<h3><%= link_to  "I WANT TO SEE MORE ARTICLES!", articles_path %></h3>
-<h3><%= link_to "TAKE ME BACK TO THAT LIST OF REALLY COOL PEOPLE!", users_path %></h3>
-<h3><%= link_to "NOT FEELING IT ANYMORE? DELETE THIS USER!", user_path(@user), method: :delete %></h3> 
+
+<h2> <%= button_to  "NOW THAT YOU'RE IN, GET WRITING!!!", new_article_path, method: :get %></h2>
+<h3><%= button_to  "I WANT TO SEE MORE ARTICLES!", articles_path, method: :get %></h3>
+<h3><%= button_to "TAKE ME BACK TO THAT LIST OF REALLY COOL PEOPLE!", users_path, method: :get %></h3>

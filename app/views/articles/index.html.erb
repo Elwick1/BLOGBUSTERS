@@ -3,7 +3,5 @@
 
 <h2><%= link_to article.title, article_path(article) %></h2>
 <% end %>
-<h2> <%= link_to  "Create And Post a New Article", new_article_path %></h2>
-<br><br>
-<h3> <%= link_to "SHOW ME MY FELLOW BLOGBUSTERS!!!", users_path %></h3>
-<p> <%= link_to "Take Me Back To The Home Page", welcome_path %></p>
+<h2> <%= button_to  "Create And Post a New Article", new_article_path, method: :get %></h2>
+<h3> <%= button_to "SHOW ME MY FELLOW BLOGBUSTERS!!!", users_path, method: :get %></h3>

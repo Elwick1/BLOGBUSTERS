@@ -3,6 +3,6 @@
 <h2><%= link_to user.username, user_path(user) %></h2>
 <% end %>
 <br>
-<h3> <%= link_to  "I WANT TO SEE MORE ARTICLES!", articles_path %></h3>
+<h3> <%= button_to  "SHOW ME MORE ARTICLES!", articles_path, method: :get %></h3>
 
-<p> <%= link_to "TAKE ME BACK TO THE HOME PAGE!", welcome_path %></p>
+ 
