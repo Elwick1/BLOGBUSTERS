@@ -1,12 +1,13 @@
-<h2>LOG IN</h2>
-
+<h2 align="center">LOG IN</h2>
+<br><br>
 <%= form_tag sessions_path do %>
-    <%= label :user, :username %>
-    <%= text_field :user, :username %>
+    <h4 align="center"><%= label :user, :username %></h4>
+    <h4 align="center"><%= text_field :user, :username %></h4>
 
-    <%= label :user, :password %>
-    <%= password_field :user, :password %>
+    <h4 align="center"><%= label :user, :password %></h4>
+    <h4 align="center"><%= password_field :user, :password %></h4>
 
-    <%= submit_tag "LOG IN" %>
-<h2><%= link_to "Back To BLOGBUSTERS Homepage", welcome_path %></h2> 
-<% end %>
+    <h4 align="center"><%= submit_tag "LOG IN" %></h4>
+    <br><br>
+<h2 align="center"><%= link_to "Back To BLOGBUSTERS Homepage", welcome_path %></h2> 
+<% end %> 

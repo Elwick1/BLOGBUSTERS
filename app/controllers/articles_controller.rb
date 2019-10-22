@@ -20,29 +20,38 @@ class ArticlesController < ApplicationController
   end
     
   def show
-    @article = Article.find(params[:id])
+    set_article
+    @user = current_user
+    # byebug
   end
     
   def edit 
-    @article = Article.find(params[:id])
+    set_article
+
   end
     
   def update
     @article = Article.find(params[:id])
     @article.update(strong_boy_params)
+    flash[:notice] = "Your Article Was Updated"
     redirect_to article_path(@article)
   end
     
   def destroy
-    @article = Article.find(params[:id])
+    set_article
     @article.destroy 
     redirect_to articles_path
   end
     
   def like 
-    @article = Article.find(params[:id])
+    set_article 
     @article.destroy
+    flash[:notice] = "Article Was Deleted"
     redirect_to article_path(@article)
+  end
+
+  def set_article 
+    @article = Article.find(params[:id])
   end
     
     private

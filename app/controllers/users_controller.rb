@@ -11,20 +11,26 @@ class UsersController < ApplicationController
     @user = User.new(strong_boy_user_params)
     if @user.valid?
       @user.save 
-      redirect_to user_path(@user)
+      flash[:success] = "Welcome to the BLOGBUSTERS #{@user.username}"
+      redirect_to welcome_path
     else
       render :new
     end
   end
       
   def show 
-    @user = User.find(params[:id])
+    set_user
   end
     
   def destroy 
-    @user = User.find(params[:id])
+    set_user
+    session.destroy
     @user.destroy 
     redirect_to users_path
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
     
   private

@@ -1,13 +1,13 @@
-<h1> BLOGBUSTER MEMBER </h1>
+<h1 align="center"> BLOGBUSTER MEMBER </h1>
 <br><br>
-<h1><%= @user.username %></h1>
+<h1 align="center">Welcome to <%= @user.username %>'s page</h1>
 <br><br>
-<h2><%= @user.age %></h2>
+<h2 align="center"><%= @user.age %></h2>
 <br><br>
-<h2><%= @user.bio %></h2>
+<h2 align="center"><%= @user.bio %></h2>
 <br><br>
 
-
-<h2> <%= button_to  "NOW THAT YOU'RE IN, GET WRITING!!!", new_article_path, method: :get %></h2>
-<h3><%= button_to  "I WANT TO SEE MORE ARTICLES!", articles_path, method: :get %></h3>
-<h3><%= button_to "TAKE ME BACK TO THAT LIST OF REALLY COOL PEOPLE!", users_path, method: :get %></h3>
+<p align="center">
+  <button type="button" class="btn btn-warning btn-lg"><%= link_to "Edit My Profile", edit_user_path%></button>
+ <%= link_to "Delete My Profile", user_path(@user), method: :delete, data: { confirm: "Are you sure you want to delete your Account?"}, class: "btn btn-lg btn-danger"%></button>
+  </p>
