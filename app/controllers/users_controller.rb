@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create 
     @user = User.new(strong_boy_user_params)
     if @user.valid?
-      @user.save 
+      @user.save
       flash[:success] = "Welcome to the BLOGBUSTERS #{@user.username}"
       redirect_to welcome_path
     else

@@ -4,7 +4,7 @@
  <hr>
  <%= simple_format(@article.content) %>
 <%= link_to 'Back', articles_path, class: "btn btn-xs btn-success" %>
-
+<%= link_to 'Like', new_like_path(:like => {:user_id => current_user.id, :article_id => @article.id}), method: :post, class: "btn btn-xs btn-info" %>
 <% if @user.id == @article.user_id %>
 
 <%= link_to "Edit", edit_article_path(@article), class: "btn btn-xs btn-primary" %> 

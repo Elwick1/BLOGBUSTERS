@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   resources :articles
   resources :users 
-  resources :likes
+  resources :likes, except: [:new, :create]
+  post "/likes", to: "likes#create", as: "new_like"
 end
