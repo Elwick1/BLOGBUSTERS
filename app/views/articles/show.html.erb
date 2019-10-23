@@ -1,14 +1,12 @@
-<h1> HERE'S <%= @article.user.username %>'s ARTICLE! </h1>
-<br><br>
-<h2><%= @article.title %></h2>
-<br><br>
-<h3><%= @article.content %></h3>
-<br><br>
+<h2 align="center"> <%= @article.title %></h2>
+<div class="well col-xs-8 col-xs-offset-2">
+ <h4 class="center"><strong>Author: <%=@article.user.username %></strong></h4>
+ <hr>
+ <%= simple_format(@article.content) %>
+<%= link_to 'Back', articles_path, class: "btn btn-xs btn-success" %>
 
+<% if @user.id == @article.user_id %>
 
-<%= button_to "EDIT MY ARTICLE", edit_article_path, method: :get %>
-<br>
-<%= button_to "DELETE MY ARTICLE", article_path(@article), method: :delete %> 
-<br>
-<%= button_to "BROWSE OTHER ARTICLES", articles_path, method: :get %>
-<br>
+<%= link_to "Edit", edit_article_path(@article), class: "btn btn-xs btn-primary" %> 
+<%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure you want to delete this article?"}, class: "btn btn-xs btn-danger" %>
+<% end %>

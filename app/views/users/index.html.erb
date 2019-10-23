@@ -1,8 +1,10 @@
-<h1>YOUR FELLOW BLOGBUSTERS (A List Of Really Cool People!)</h1>
+<h1 align="center">YOUR FELLOW BLOGBUSTERS (A List Of Really Cool People!)</h1>
+<br>
 <% @users.each do |user| %>
-<h2><%= link_to user.username, user_path(user) %></h2>
+<br>
+<h2 align="center"><%= link_to user.username, user_path(user) %></h2>
 <% end %>
 <br>
-<h3> <%= button_to  "SHOW ME MORE ARTICLES!", articles_path, method: :get %></h3>
 
- 
+
+  
