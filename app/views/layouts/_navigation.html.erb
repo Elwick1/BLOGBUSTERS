@@ -18,7 +18,6 @@
         <li><%= link_to "Members", users_path %>
         <li><%= link_to "Articles", articles_path %></li>
         <li><%= link_to "Create Article", new_article_path %></li>
-        <p class="navbar-text">Signed in as <%= current_user.username %></p>
         <% end %>
           </ul>
         </li>
@@ -26,6 +25,7 @@
       
       <ul class="nav navbar-nav navbar-right">
       <% if current_user %>
+      <p class="navbar-text", style="color:MediumSeaGreen;">Signed in as <%= current_user.username %></p>
       <button type="button" class="btn btn-warning navbar-btn"><%= link_to "Log Out", sessions_path, method: :delete %> </button>
       <% else %>
       <button type="button" class="btn btn-success navbar-btn"><%= link_to "Sign in", new_session_path %> </button>
