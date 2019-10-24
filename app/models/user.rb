@@ -1,7 +1,6 @@
 class User < ApplicationRecord
   has_many :articles
-  has_many :likes 
-  # has_many :liked, :through likes
+  has_many :likes, through: :articles
   validates :username, uniqueness: true
   validates :username, presence: true
   validates :username, length: { maximum: 15 }
