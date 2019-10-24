@@ -1,0 +1,4 @@
+<h1 align="center"><%=current_user.username%> You've Liked This article!</h1>
+<br>
+<h2 align="center"><%= link_to "Go Back", article_path(params[:like][:article_id]), class: "btn btn-lg btn-success" %></h2>
+<div class="frontlogo", align="center"><%= image_tag  "logo.jpeg" %></div>

@@ -5,11 +5,16 @@ class LikesController < ApplicationController
   end
 
   def create 
-    @like = Like.create(strong_like_params)
+    @like = Like.new(strong_like_params)
+    if @like.valid?
+    @like.save
+    redirect_to new_like_path
+    end
   end
 
   def show 
     @like = Like.find(params[:id])
+    @article = Like.article_id
   end
   
   private 
