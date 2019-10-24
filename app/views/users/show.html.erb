@@ -6,6 +6,15 @@
 <br><br>
 <h2 align="center"><%= @user.bio %></h2>
 <br><br>
-
-
- 
+<h2 align="center"><%= @user.username %>'s Most Liked Article!</h2>
+<% if @user.articles.length > 0 %>
+<br><br>
+<h2 align="center"><%= link_to @user.most_liked_article.title, article_path(params[:id]), class: "btn btn-lg btn-success" %></h2>
+<% else %>
+<br><br>
+<h3 align="center"><%=@user.username%> Doesn't Have Any Likes Yet... GO SHOW THEM SOME LOVE!!!</h3>
+<% end %>
+<br><br>
+<% if current_user.id == @user.id %>
+<h1 align="center"><%= link_to "Delete My Account", user_path(@user), method: :delete, data: { confirm: "Are you sure you want to delete your Account?"}, class: "btn btn-lg btn-danger" %></h1>
+ <% end %>

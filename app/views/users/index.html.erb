@@ -1,10 +1,20 @@
 <h1 align="center">YOUR FELLOW BLOGBUSTERS (A List Of Really Cool People!)</h1>
 <br>
 <% @users.each do |user| %>
-<br>
-<h2 align="center"><%= link_to user.username, user_path(user) %></h2>
-<% end %>
-<br>
 
+<br>
+<div class="row">
+  <div class="col-xs-4 col-xs-offset-4">
+   <div class="well well-sm">
+    <div class="user-username">
+     <h1 align="center"><%= link_to user.username, user_path(user), class: 'btn btn-success btn-lg btn-block' %></h1>
+     </div>
+    <div class="user-actions">
+    </div>
+   </div>
+  </div>
+ </div>
+
+<% end %>
 
   
