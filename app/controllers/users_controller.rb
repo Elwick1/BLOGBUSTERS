@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if @user.valid?
       @user.save
       flash[:success] = "Welcome to the BLOGBUSTERS #{@user.username}"
-      redirect_to welcome_path
+      redirect_to new_log_in_path
     else
       render :new
     end

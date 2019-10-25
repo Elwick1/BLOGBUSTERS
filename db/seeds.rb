@@ -10,3 +10,4 @@ user2 = User.create(username: 'BackyardDave', age: '29', bio: 'I really like the
 user3 = User.create(username: 'Tarzan', age: '32', bio: 'lives in the jungle, raised by gorillas after my parents were eaten by a leopard', password: 'jane69')
 user4 = User.create(username: 'Timbo55', age: '20', bio: 'I am Very Young, in fact the MATRIX is older than me', password: 'timber')
 
+# article1 = Article.create(title: 'STAR WARS', content: )
