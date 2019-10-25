@@ -8,8 +8,8 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id 
       redirect_to log_in_path
     else
-      flash.now[:notice] = "Sorry, But We Can't Find A Member With That Username Or Password"
-      redirect_to new_session_path
+      
+      redirect_to new_session_path, :notice => "Sorry, But We Can't Find A Member With That Username Or Password"
     end
   end
 
